@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --BJJTutorsLogo.png: url('/bjjTutorsLogo.png');
   --BjjTutor.png: url('/bjj-tutor-logo.png');
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
