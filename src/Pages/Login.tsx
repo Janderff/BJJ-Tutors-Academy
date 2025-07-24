@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import BjjTutorLogo from '@/assets/bjjTutorsLogo.png'
+import { useNavigate } from 'react-router-dom'
 
 const schema = z.object({
   email: z.string().email(),
@@ -13,11 +14,32 @@ const schema = z.object({
 })
 type FormData = z.infer<typeof schema>
 export function Login() {
+  const navigate = useNavigate()
   const { handleSubmit, register, formState } = useForm<FormData>({
     resolver: zodResolver(schema),
   })
-  function onSubmit(data: FormData) {
-    console.log(data)
+  async function onSubmit(data: FormData) {
+    const email = data.email
+    const password = data.password
+    try {
+      const response = await fetch('http://localhost:3000/users')
+      if (!response.ok) {
+        throw new Error('Erro ao buscar usuários')
+      }
+      const users = await response.json()
+      const user = users.find(
+        (u: any) => u.email === email && u.password === password
+      )
+      if (user) {
+        setTimeout(() => {
+          navigate('/teacherDashboard')
+        }, 1000)
+      } else {
+        console.log('Login falhou: Credenciais inválidas.')
+      }
+    } catch (error) {
+      console.error('Erro na requisição:', error)
+    }
   }
 
   return (
