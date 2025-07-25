@@ -2,18 +2,33 @@
   "users": [
     {
       "id": 1,
-      "username": "usuario1@email.com",
-      "password": "senha123"
+      "username": "usuario@email.com",
+      "password": "senha123",
+      "role": "aluno"
     },
     {
       "id": 2,
       "username": "admin",
-      "password": "adminpassword"
+      "password": "adminpassword",
+      "role": "admin"
     },
     {
       "id": 3,
-      "email": "teste@example.com",
-      "password": "outrasenha"
+      "email": "professor@jiujitsu.com",
+      "password": "outrasenha",
+      "role": "professor"
+    },
+    {
+      "id": 4,
+      "email": "aluno@jiujitsu.com",
+      "password": "outrasenha",
+      "role": "aluno"
+    },
+    {
+      "id": 5,
+      "email": "aluno1@example.com",
+      "password": "senha123",
+      "role": "aluno"
     }
   ]
 }
