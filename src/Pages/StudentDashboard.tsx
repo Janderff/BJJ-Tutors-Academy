@@ -1,3 +1,10 @@
+import { Header } from '@/Components/Header'
+
 export function StudentDashboard() {
-  return <div>studentDashboard</div>
+  return (
+    <div>
+      <Header />
+      <div>studentDashboard</div>
+    </div>
+  )
 }
