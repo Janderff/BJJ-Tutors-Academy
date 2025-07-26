@@ -3,8 +3,9 @@ import { Button } from './ui/button'
 import { LogOut, Plus } from 'lucide-react'
 interface HeaderProps {
   buttonLabel: string
+  onButtonClick: () => void
 }
-export function Header({ buttonLabel }: HeaderProps) {
+export function Header({ buttonLabel, onButtonClick }: HeaderProps) {
   const navigate = useNavigate()
   return (
     <header className='p-4 mb-2 w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-2'>
@@ -16,7 +17,7 @@ export function Header({ buttonLabel }: HeaderProps) {
 
       {/* Direita */}
       <div className='w-full sm:w-auto flex flex-col sm:flex-row justify-end items-center gap-4'>
-        <Button variant='destructive' type='button'>
+        <Button variant='destructive' type='button' onClick={onButtonClick}>
           <Plus className='mr-2' />
           {buttonLabel}
         </Button>
