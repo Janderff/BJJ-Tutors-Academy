@@ -3,7 +3,7 @@ import { Header } from '@/Components/Header'
 export function TeacherDashboard() {
   return (
     <div>
-      <Header />
+      <Header buttonLabel='Nova Aula' />
       <div>teacherDashboard</div>
     </div>
   )
