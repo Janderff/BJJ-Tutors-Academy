@@ -30,6 +30,7 @@ export function Login() {
       const user = users.find(
         (u: any) => u.email === email && u.password === password
       )
+      localStorage.setItem('user', JSON.stringify(user.username))
       if (user && user.role === 'professor') {
         setTimeout(() => {
           navigate('/teacherDashboard')

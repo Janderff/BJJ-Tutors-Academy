@@ -9,23 +9,27 @@
     {
       "id": 2,
       "username": "admin",
+      "email": "admin@email.com",
       "password": "adminpassword",
       "role": "admin"
     },
     {
       "id": 3,
+      "username": "Professor",
       "email": "professor@jiujitsu.com",
       "password": "outrasenha",
       "role": "professor"
     },
     {
       "id": 4,
+      "username": "Aluno",
       "email": "aluno@jiujitsu.com",
       "password": "outrasenha",
       "role": "aluno"
     },
     {
       "id": 5,
+      "username": "Aluno1",
       "email": "aluno1@example.com",
       "password": "senha123",
       "role": "aluno"
