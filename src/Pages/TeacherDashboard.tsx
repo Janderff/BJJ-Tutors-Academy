@@ -4,9 +4,9 @@ export function TeacherDashboard() {
   function handleClick() {
     alert('professor clicou')
   }
-  function getUserName(name: any) {
+  function getUserName(_name: any) {
     try {
-      const userName = localStorage.getItem('user')
+      const userName = localStorage.getItem('user')?.replace(/^"(.*)"$/, '$1')
       return userName?.toString() ?? 'default name'
     } catch (error) {}
   }
