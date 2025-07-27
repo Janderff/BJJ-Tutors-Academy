@@ -24,8 +24,6 @@ export function FormStudentClass({
 }: FormStudentClassProps) {
   return (
     <div>
-      //Retirada do dialogtrigger para que ele seja renderigazo pelo comando
-      abaixo
       <Dialog open={open} onOpenChange={onOpenChange}>
         <form>
           <DialogContent className='sm:max-w-[425px]'>
