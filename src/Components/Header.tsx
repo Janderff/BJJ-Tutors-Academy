@@ -9,7 +9,7 @@ interface HeaderProps {
 export function Header({ buttonLabel, onButtonClick, name }: HeaderProps) {
   const navigate = useNavigate()
   return (
-    <header className='p-4 mb-2 w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-2'>
+    <header className='p-4 mb-2 bg-white w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-2'>
       {/* Esquerda */}
       <div className='flex flex-col gap-2'>
         <h1 className='text-2xl font-bold'>BJJ Tutors Academy</h1>
