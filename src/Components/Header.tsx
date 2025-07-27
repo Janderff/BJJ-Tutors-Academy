@@ -3,7 +3,7 @@ import { Button } from './ui/button'
 import { LogOut, Plus } from 'lucide-react'
 interface HeaderProps {
   buttonLabel: string
-  onButtonClick: () => void
+  onButtonClick: () => {}
   name?: string
 }
 export function Header({ buttonLabel, onButtonClick, name }: HeaderProps) {

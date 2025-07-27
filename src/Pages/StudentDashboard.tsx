@@ -1,9 +1,9 @@
+import { FormStudentClass } from '@/Components/FormStudentClass'
 import { Header } from '@/Components/Header'
+import { useState } from 'react'
 
 export function StudentDashboard() {
-  function handleClick() {
-    console.log('aluno clicou')
-  }
+  const [open, setOpen] = useState(false)
 
   function getUserName(_name: any) {
     try {
@@ -18,9 +18,10 @@ export function StudentDashboard() {
     <div>
       <Header
         buttonLabel='Agendar Aula'
-        onButtonClick={handleClick}
+        onButtonClick={async () => setOpen(true)}
         name={getUserName(name)}
       />
+      <FormStudentClass open={open} onOpenChange={setOpen} />
       <div>oi estudante</div>
     </div>
   )
