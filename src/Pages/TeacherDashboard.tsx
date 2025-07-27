@@ -1,5 +1,13 @@
 import { FormTeacherClass } from '@/Components/FormTeacherClass'
 import { Header } from '@/Components/Header'
+import { TeacherCards } from '@/Components/TeacherCards'
+import {
+  Calendar,
+  CircleCheckBig,
+  DollarSign,
+  Triangle,
+  TriangleAlert,
+} from 'lucide-react'
 import { useState } from 'react'
 
 export function TeacherDashboard() {
@@ -18,7 +26,32 @@ export function TeacherDashboard() {
         name={getUserName(name)}
       />
       <FormTeacherClass open={open} onOpenChange={setOpen} />
-      <div>oi professor</div>
+      <div className='grid grid-cols-4 gap-4 m-4'>
+        <TeacherCards
+          cardName='Aulas Agendadas'
+          number={0}
+          icon={Calendar}
+          iconColor='text-cyan-500'
+        />
+        <TeacherCards
+          cardName='Aulas Realizadas'
+          number={0}
+          icon={CircleCheckBig}
+          iconColor='text-emerald-500'
+        />
+        <TeacherCards
+          cardName='Reita Total'
+          number={0}
+          icon={DollarSign}
+          iconColor='text-teal-500'
+        />
+        <TeacherCards
+          cardName='Pagamentos Pendentes'
+          number={0}
+          icon={TriangleAlert}
+          iconColor='text-red-500'
+        />
+      </div>
     </div>
   )
 }

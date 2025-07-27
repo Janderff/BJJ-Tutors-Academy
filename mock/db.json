@@ -2,37 +2,50 @@
   "users": [
     {
       "id": 1,
-      "username": "usuario@email.com",
+      "username": "Jander",
+      "email": "jander@jiujitsu.com",
       "password": "senha123",
-      "role": "aluno"
+      "role": "professor",
+      "telefone": "(11) 91234-5678"
     },
     {
       "id": 2,
-      "username": "admin",
-      "email": "admin@email.com",
-      "password": "adminpassword",
-      "role": "admin"
+      "username": "Carlos Santos",
+      "email": "carlos@jiujitsu.com",
+      "password": "senha123",
+      "role": "aluno",
+      "telefone": "(11) 88888-8888",
+      "professorId": 1,
+      "faixaGraduacao": "Faixa Roxa",
+      "dataGraduacao": "2022-03-12",
+      "valorPorAula": 70.0,
+      "status": "Ativo"
     },
     {
       "id": 3,
-      "username": "Professor",
-      "email": "professor@jiujitsu.com",
-      "password": "outrasenha",
-      "role": "professor"
+      "username": "Maria Oliveira",
+      "email": "maria@jiujitsu.com",
+      "password": "senha123",
+      "role": "aluno",
+      "telefone": "(11) 77777-7777",
+      "professorId": 1,
+      "faixaGraduacao": "Faixa Azul",
+      "dataGraduacao": null,
+      "valorPorAula": 60.0,
+      "status": "Ativo"
     },
     {
       "id": 4,
-      "username": "Aluno",
-      "email": "aluno@jiujitsu.com",
-      "password": "outrasenha",
-      "role": "aluno"
-    },
-    {
-      "id": 5,
-      "username": "Aluno1",
-      "email": "aluno1@example.com",
+      "username": "Pedro Costa",
+      "email": "pedro@jiujitsu.com",
       "password": "senha123",
-      "role": "aluno"
+      "role": "aluno",
+      "telefone": "(11) 66666-6666",
+      "professorId": 1,
+      "faixaGraduacao": "Faixa Roxa",
+      "dataGraduacao": "2022-03-12",
+      "valorPorAula": 70.0,
+      "status": "Ativo"
     }
   ]
 }
