@@ -31,6 +31,7 @@ export function Login() {
         (u: any) => u.email === email && u.password === password
       )
       localStorage.setItem('user', JSON.stringify(user.username))
+      localStorage.setItem('userId', JSON.stringify(user.id))
       if (user && user.role === 'professor') {
         setTimeout(() => {
           navigate('/teacherDashboard')
