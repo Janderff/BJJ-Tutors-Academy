@@ -11,8 +11,11 @@ export type User = {
   dataGraduacao?: string | null
   valorPorAula?: number
   status?: 'Ativo' | 'Inativo'
+  totalAulas?: string
 }
-export async function getUsers(): Promise<User[]> {
-  const response = await api.get('/users')
+export async function getStudentsForTeacher(
+  professorId: string
+): Promise<User[]> {
+  const response = await api.get(`/users?professorId=${professorId}`)
   return response.data
 }
